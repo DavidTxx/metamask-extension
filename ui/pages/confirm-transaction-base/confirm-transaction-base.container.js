@@ -68,7 +68,6 @@ const mapStateToProps = (state, ownProps) => {
     conversionRate,
     identities,
     addressBook,
-    assetImages,
     network,
     unapprovedTxs,
     nextNonce,
@@ -89,7 +88,6 @@ const mapStateToProps = (state, ownProps) => {
     data,
   } = (transaction && transaction.txParams) || txParams;
   const accounts = getMetaMaskAccounts(state);
-  const assetImage = assetImages[txParamsToAddress];
 
   const { balance } = accounts[fromAddress];
   const { name: fromName } = identities[fromAddress];
@@ -166,7 +164,6 @@ const mapStateToProps = (state, ownProps) => {
     conversionRate,
     transactionStatus,
     nonce,
-    assetImage,
     unapprovedTxs,
     unapprovedTxCount,
     currentNetworkUnapprovedTxs,
